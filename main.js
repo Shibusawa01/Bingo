@@ -43,5 +43,4 @@
 
 const columns = createColumns();
 renderBingo(columns);
-
-}
+  }
