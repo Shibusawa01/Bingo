@@ -43,4 +43,10 @@
 
 const columns = createColumns();
 renderBingo(columns);
+{
+  const btn = document.getElementById('btn');
+  btn.addEventListener('click',()=>{
+  
+  });
+}
   }

@@ -12,10 +12,23 @@ th,td{
   height:60px;
   text-align:center;
   line-height:60px;
-  user-select:none;
-  cursor:pointer;
 }
 
 .bingo{
   margin:auto;
 }
+
+#btn{
+  user-select:none;
+  cursor:pointer;
+  margin:3px auto;
+}
+
+#btn:hover{
+  opacity:0.8;
+  }
+  
+  #btn:active{
+    box-shadow:0 0.3px 0 rgb(195, 147, 151);
+    margin-top:3.7px;
+  }
