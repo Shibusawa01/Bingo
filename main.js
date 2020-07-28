@@ -50,13 +50,4 @@ renderBingo(columns);
   });
   
 }
-{
-  const suu = document.getElementById('suu');
-  btn.addEventListener('click',()=>{
-    var min = 1 ;
-    var max = 75 ;
-    
-    var a = Math.floor( Math.random() * (max + 1 - min) ) + min;
-  });
-}
 }

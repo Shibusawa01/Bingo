@@ -21,7 +21,17 @@
     </tbody>
   </thead>
 </table>
-<h1><input type="button" value="数字を出す" id="suu"></h1>
+<div class="hyj">
+<form><input type="button" value="数字を出す" class="hyj" onClick="random()">
+  <h1><span id="ransuu">表示場所</span></h1></form>
+</div>
+  
+  <script type="text/javascript">
+  function random() {
+  var num = Math.floor( Math.random() * 75 + 1 ) ; //乱数の取得
+  document.getElementById("ransuu").innerHTML = num; //乱数の出力
+  }
+  </script>
   <script src="main.js?28081308"></script>
 </body>
 
