@@ -46,7 +46,7 @@ renderBingo(columns);
 {
   const btn = document.getElementById('btn');
   btn.addEventListener('click',()=>{
-    alert('BINGO!');
+    alert('BINGO Start!');
   });
 }
   }
