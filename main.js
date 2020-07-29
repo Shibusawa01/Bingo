@@ -1,53 +1,58 @@
 'use strict';
 
 {
-  function createColumn(col){
-    
+  function createColumn(col) {
+
     const source = [];
-    for(let i = 0; i < 15; i++){
-      source[i] = i + 1 +15 *col;
+    for (let i = 0; i < 15; i++) {
+      source[i] = i + 1 + 15 * col;
     }
-   
-  
+
+
     const column = [];
-    for (let i =0; i<5; i++){
+    for (let i = 0; i < 5; i++) {
       column[i] = source.splice(Math.floor(Math.random() * source.length), 1)[0];
-    
-  }
+
+    }
     return column;
   }
 
-  function createColumns(){
+  function createColumns() {
 
-  const columns = [];
+    const columns = [];
 
-  for(let i = 0; i<5; i++){
-  columns[i] =createColumn(i);
+    for (let i = 0; i < 5; i++) {
+      columns[i] = createColumn(i);
+    }
+    columns[2][2] = 'FREE';
+    return columns;
   }
-  columns[2][2] = 'FREE';
-  return columns;
-  }
 
-  function renderBingo(columns){
-    for (let row =0;row < 5; row++){
+  function renderBingo(columns) {
+    for (let row = 0; row < 5; row++) {
       const tr = document.createElement('tr');
-      for(let col = 0;col <5; col++){
+      for (let col = 0; col < 5; col++) {
         const td = document.createElement('td');
         td.textContent = columns[col][row];
         tr.appendChild(td);
       }
       document.querySelector('tbody').appendChild(tr);
     }
-  
+
   }
 
-const columns = createColumns();
-renderBingo(columns);
-{
-  const btn = document.getElementById('btn');
-  btn.addEventListener('click',()=>{
-    alert('BINGO Start!');
-  });
-  
+  const columns = createColumns();
+  renderBingo(columns);
+  {
+    const btn = document.getElementById('btn');
+    btn.addEventListener('click', () => {
+      alert('BINGO Start!');
+    });
+
+  }
 }
+
+function random() {
+  var num = Math.floor(Math.random() * 75 + 1); //乱数の取得
+  document.getElementById("ransuu").innerHTML = num; //乱数の出力
 }
